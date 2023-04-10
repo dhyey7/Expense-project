@@ -1,17 +1,28 @@
-<!-- Register page -->
-{% load static %}
+{% comment %} Forgot password {% endcomment %}
 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Expense Manager | Registration Page</title>
+  <title>Expense Manager | Change Password</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  {% comment %} <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css"> {% endcomment %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- Ionicons -->
+  <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/icheck/icheck-bootstrap.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/admin/adminlte.min.css' %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
   <!-- icheck bootstrap -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/icheck/icheck-bootstrap.min.css' %}">
   <!-- Theme style -->
@@ -25,9 +36,9 @@
 
   <div class="card">
     <div class="card-body register-card-body">
-      <p class="login-box-msg">Register a new membership</p>
+      <p class="login-box-msg">Change Password</p>
 
-        <form method="post">
+        <!-- <form method="post">
           {% csrf_token %}
           <div class="input-group mb-3">
             {{ form.fullname }}
@@ -36,10 +47,10 @@
                 <span class="fas fa-user"></span>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="input-group mb-3">
-            {% comment %} <input type="email" class="form-control" name="email" placeholder="Email" > {% endcomment %}
+              <input type="email" class="form-control" name="email" placeholder="Email" > 
             {{ form.email }}
             <div class="input-group-append">
               <div class="input-group-text">
@@ -49,7 +60,7 @@
           </div>
 
           <div class="input-group mb-3">
-            {% comment %} <input type="password" class="form-control" placeholder="Password" name="password1"> {% endcomment %}
+            <input type="password" class="form-control" placeholder="Password" name="password1">
             {{ form.password1 }}
             <div class="input-group-append">
               <div class="input-group-text">
@@ -59,7 +70,7 @@
           </div>
 
           <div class="input-group mb-3">
-            {% comment %} <input type="password" class="form-control" placeholder="Retype password" name="password2"> {% endcomment %}
+            <input type="password" class="form-control" placeholder="Retype password" name="password2"> 
             {{ form.password2 }}
             <div class="input-group-append">
               <div class="input-group-text">
@@ -79,18 +90,17 @@
             </div>
             <!-- /.col -->
             <div class="col-4">
-              {% comment %} <button type="submit" class="btn btn-primary btn-block">Register</button> {% endcomment %}
-              <input type="submit" value="Register" class="btn btn-primary btn-block">
+             <button type="submit" class="btn btn-primary btn-block">Submit</button> 
+              <!-- <input type="submit" value="Register" class="btn btn-primary btn-block"> -->
             </div>
             <!-- /.col -->
           </div>
       </form>
       <p class="mb-0">
-        <a href="{% url 'login' %}" class="text-center">Already have a membership</a>
+        <a href="{% url 'login' %}" class="text-center">Login In to Expense Manager</a>
       </p>
       </div>
     </div>
-   
     <!-- /.form-box -->
   </div><!-- /.card -->
 </div>
@@ -105,3 +115,6 @@
 <script src="{% static 'js/admin/adminlte.min.js' %}"></script>
 </body>
 </html>
+
+
+

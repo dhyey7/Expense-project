@@ -7,6 +7,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from User.models import User
 
+#registration Form 
 
 class RegisterForm(UserCreationForm):
     password1 = forms.CharField(

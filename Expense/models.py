@@ -35,7 +35,7 @@ class Label (models.Model):
         
 class Payee (models.Model):
     #pld=models.CharField (primary_key=True)
-    #user=models.ForeignKey("User",on_delete=models.CASCADE)
+    user=models.ForeignKey(User, on_delete=models.CASCADE)
     name=models.CharField(max_length=50)
    
     class meta:
@@ -80,7 +80,7 @@ class Account(models.Model):
         
 status = (('cleared','cleared'),('uncleared','uncleared'),('void','void'))
 transaction=(('expense','expense'),('income','income'))
-class Expense (models.Model):
+class Expense(models.Model):
     #expenseId = models.CharField(primary_key=True)
     amount = models.FloatField()
     expDateTime = models.DateField()
@@ -94,6 +94,6 @@ class Expense (models.Model):
         
     class meta:
         db_table = 'expense'
-    def __str__(self):
-        return self.amount
         
+    def __str__(self):
+        return str(self.amount)
