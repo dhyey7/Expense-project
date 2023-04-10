@@ -26664,6 +26664,7 @@ body.text-sm .input-group-text {
 
 .card-primary.card-outline {
   border-top: 3px solid #007bff;
+  width: 50%;
 }
 
 .card-primary.card-outline-tabs > .card-header a:hover {
@@ -27010,7 +27011,7 @@ body.text-sm .input-group-text {
 }
 
 .card-danger:not(.card-outline) > .card-header {
-  background-color: #dc3545;
+  background-color: #3498db;
 }
 
 .card-danger:not(.card-outline) > .card-header,
@@ -53009,4 +53010,5 @@ a.text-muted:hover {
 .dark-mode .border-dark {
   border-color: #4b545c !important;
 }
+
 /*# sourceMappingURL=adminlte.css.map */
